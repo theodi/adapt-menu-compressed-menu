@@ -1,0 +1,17 @@
+{
+  "name": "adapt-contrib-compressedmenu",
+  "version": "2.0.0",
+  "framework": ">=2.1",
+  "homepage": "https://github.com/davetaz/adapt-contrib-compressedmenu",
+  "issues": "https://github.com/davetaz/adapt-contrib-compressedmenu/issues",
+  "displayName": "Compressed menu",
+  "menu": "compressedmenu",
+  "description": "A compressed menu",
+  "main": "js/adapt-contrib-compressedmenu.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-menu"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_compressedMenu"
+}

@@ -1,0 +1,149 @@
+.menu-title {
+	color: @primary-color;
+	margin-bottom:@menu-title-padding-bottom;
+}
+
+.menu {
+	background: @primary-color-inverted;
+	.menu-container {
+		.responsive-large;
+		.responsive-medium;
+		.responsive-small;
+	}
+
+	.menu-container-inner {
+		padding:@menu-body-padding;
+		height: inherit;
+		.menu-header {
+			height: 100%;
+		}
+	}
+
+	.menu-item {
+		.responsive-medium;
+		.responsive-small;
+		width:100%;
+		margin-left: 20px;
+		margin-top: 20px;
+		margin-right:20px;
+	}
+
+	.menu-item-inner {
+		background: @primary-color;
+		height:86px;
+		position:relative;
+	}
+
+	.menu-graphic a {
+		display: block;
+	}
+	
+	.menu-item-title {
+		padding-left: 10px;
+		padding-top: 15px;
+		float: left;
+    	display: inline-block;
+   	 	width: 69%;
+		.item-title;
+		color: @primary-color-inverted;
+	}
+
+	.menu-item-body {
+		padding:@menu-body-padding;
+		display: none;
+	}
+
+	.menu-item-button {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+    	display: inline-block;
+    	width: 117px;
+    	height: 66px;
+    	button {
+    		height: 100%;
+    		width: 100%;
+    		border: 1px solid @primary-color;
+    		background-color: @primary-color-inverted;
+    		color: @primary-color;
+    		.menu-button-text {
+    			display:inline-block;
+    			padding-bottom: 5px;
+    		}
+    	}
+		a {
+			text-decoration: none;
+			background-color:@primary-color-inverted;
+			color:@primary-color;
+			padding:@button-padding;
+			
+			&:hover {
+				background-color:@button-hover-color;
+				color:@button-text-hover-color;
+			}
+			
+			&.visited {
+				background-color:@button-disabled-color;
+				color:@button-text-disabled-color;
+			}
+		}
+	}
+
+	.menu-item-duration {
+		float:right;
+        .dir-rtl & {
+            float:left;
+        }
+	}
+
+	.page-level-progress-menu-item {
+		padding: 0px;
+		position: absolute;
+		right: 6px;
+		bottom: 4px;
+	}
+	.page-level-progress-menu-item-indicator {
+		border: 2px solid @primary-color-inverted;
+	}
+	.page-level-progress-menu-item-indicator-bar {
+    	background-color: @primary-color-inverted;
+	}
+	.menu-footer {
+		position: fixed;
+    	bottom: 0px;
+    	height: 64px;
+    	background-color: @navigation-color;
+    	width: 100%;
+	}
+}
+
+
+
+@media all and (max-width:@device-width-medium) {
+	.menu-title-inner{
+		padding:15px 0 0;
+	}
+
+	.menu-body-inner{
+		padding:0px 0 10px;
+	}
+
+   	.menu{
+
+   		.menu-inner {
+			padding:0;
+		}
+
+		.menu-item{
+			width:100%;
+			margin-bottom:20px;
+			
+			&.nth-child-even, &.nth-child-odd{
+				
+				.menu-item-inner{
+					margin:0;
+				}
+			}
+		}
+   	}
+}
