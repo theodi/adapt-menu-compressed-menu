@@ -6,6 +6,8 @@
 .menu {
 	background: @primary-color-inverted;
 	.menu-container {
+		height: ~"calc(100vh - 124px)";
+    	overflow-y: scroll;
 		.responsive-large;
 		.responsive-medium;
 		.responsive-small;
@@ -13,16 +15,24 @@
 
 	.menu-container-inner {
 		padding:@menu-body-padding;
-		height: inherit;
 		.menu-header {
 			height: 100%;
+			width: 100%;
+			text-align: center;
+		}
+		.menu-body-inner {
+			max-width: 32em;
+    		margin-left: auto;
+    		margin-right: auto;
+    		padding-top: 1em;
 		}
 	}
 
 	.menu-item {
 		.responsive-medium;
 		.responsive-small;
-		width:100%;
+		//width:100%;
+		max-width: 37em;
 		margin-left: 20px;
 		margin-top: 20px;
 		margin-right:20px;
@@ -30,8 +40,8 @@
 
 	.menu-item-inner {
 		background: @primary-color;
-		height:86px;
 		position:relative;
+		padding: 3px;
 	}
 
 	.menu-graphic a {
@@ -39,11 +49,7 @@
 	}
 	
 	.menu-item-title {
-		padding-left: 10px;
-		padding-top: 15px;
-		float: left;
-    	display: inline-block;
-   	 	width: 69%;
+		padding: 15px;
 		.item-title;
 		color: @primary-color-inverted;
 	}
@@ -54,12 +60,12 @@
 	}
 
 	.menu-item-button {
-		position: absolute;
-		top: 0px;
-		right: 0px;
-    	display: inline-block;
+    	display: block;
     	width: 117px;
-    	height: 66px;
+    	height: 60px;
+    	padding-left: 16px;
+    	padding-bottom: 16px;
+    	display: inline-block;
     	button {
     		height: 100%;
     		width: 100%;
@@ -97,10 +103,10 @@
 	}
 
 	.page-level-progress-menu-item {
-		padding: 0px;
-		position: absolute;
-		right: 6px;
-		bottom: 4px;
+		padding:42px;
+		position: relative;
+		float: right;
+		display: inline-block;
 	}
 	.page-level-progress-menu-item-indicator {
 		border: 2px solid @primary-color-inverted;
@@ -109,11 +115,17 @@
     	background-color: @primary-color-inverted;
 	}
 	.menu-footer {
+		@media all and (min-width:@max-width) {
+			width: @max-width;	
+		}
 		position: fixed;
     	bottom: 0px;
     	height: 64px;
     	background-color: @navigation-color;
     	width: 100%;
+    	@media all and (max-width:@max-width) {
+    		left: 0;
+    	}
 	}
 }
 
